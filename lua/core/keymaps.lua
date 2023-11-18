@@ -18,11 +18,13 @@ map('n', '<leader>q', ':qa!<CR>', opts)
 -- Сохранить и закрыть буфер
 map('n', '<leader>S', ':wq<CR>', opts)
 
+--- NeoTree
+map('n', '<leader>e', ':Neotree toggle<CR>', opts)  -- открыть/закрыть
 
----- NeoTree
-map('n', '<leader>e', ':NeoTreeFocusToggle<CR>', opts)  -- открыть/закрыть
+---- TagBar
+map('n', '<leader>t', ":TagbarToggle<CR>", opts)
 
----- Telescope
+---- Telescop
 
 -- Поиск файлов по их имени
 map('n', '<leader>ff', ':Telescope find_files<CR>', opts) 
@@ -58,3 +60,6 @@ map('n', '<A-t>', '<Cmd>tabnew<CR>', opts)
 map('n', '<leader>/', ':CommentToggle<CR>', opts)
 map('v', '<leader>/', ':CommentToggle<CR>', opts)
 
+
+---- Hex Viever
+map('n', '<leader>h', ':HexToggle<CR>', opts)

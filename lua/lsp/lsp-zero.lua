@@ -16,6 +16,7 @@ lsp.setup()
 -- You need to setup `cmp` after lsp-zero
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
+local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
 cmp.setup({
   sources = {
@@ -27,10 +28,16 @@ cmp.setup({
   },
   mapping = {
     -- `Enter` key to confirm completion
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
+    -- ['<CR>'] = cmp.mapping.confirm({select = false}),
 
     -- Ctrl+Space to trigger completion menu
-    ['<C-Space>'] = cmp.mapping.complete(),
+    -- ['<C-Space>'] = cmp.mapping.complete(),
+    
+    ['<A-k>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<A-j>'] = cmp.mapping.select_next_item(cmp_select),
+    ['<A-l>'] = cmp.mapping.confirm({select = true}),
+    ["<C-Space>"] = cmp.mapping.complete(),
+
   },
 })
 

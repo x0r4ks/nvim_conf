@@ -9,9 +9,13 @@ require('plugins/lualine')
 require('plugins/notify')
 require('plugins/comment')
 require('plugins/autopairs')
+require('plugins/hex-nvim')
 
 -- Load lsp
 require('lsp/lsp-zero')
+
+-- autocommands
+require('core/autocommands')
 
 -- Set Color scheme
 vim.cmd[[colorscheme darcula]]

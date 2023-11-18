@@ -29,6 +29,11 @@ lazy.setup({
         "nvim-neo-tree/neo-tree.nvim",
         dependencies = {"nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim"}
     },
+    
+    -- TagBar
+    {
+        'preservim/tagbar',
+    },
 
     -- Telescope
     {
@@ -114,6 +119,9 @@ lazy.setup({
         'terrortylor/nvim-comment',
         'windwp/nvim-autopairs',
 
+    },
+    {
+        'RaafatTurki/hex.nvim',
     },
 
 })
