@@ -4,7 +4,6 @@ local opts = { noremap = true, silent = true }
 
 local settings = require("core.options");
 
-
 vim.g.mapleader = ' ' -- Главная клавиша для шорткатов
 
 ---- Basic
@@ -65,3 +64,12 @@ map('v', '<leader>/', ':CommentToggle<CR>', opts)
 
 ---- Hex Viever
 map('n', '<leader>h', ':HexToggle<CR>', opts)
+
+
+local keys = {
+    autocomplete_key_confirm = "<CR>", -- <CR> is Enter
+    autocomplete_key_next = "<Tab>", -- <Tab> is Tab
+    autocomplete_key_prev = "<Tab>",
+}
+
+return keys

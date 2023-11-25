@@ -1,5 +1,8 @@
 local lsp = require('lsp-zero').preset({})
 local cmp = require('cmp')
+local keymaps = require('core.keymaps')
+local options = require('core.options')
+
 lsp.set_sign_icons({
   error = '✘',
   warn = '▲',
@@ -28,14 +31,9 @@ cmp.setup({
   },
   mapping = cmp.mapping.preset.insert({
     -- `Enter` key to confirm completion
-    ['<CR>'] = cmp.mapping.confirm({select = false}),
-        
-    -- Ctrl+Space to trigger completion menu
-    -- ['<C-Space>'] = cmp.mapping.complete(),
-    
-    -- ['<Tab>'] = cmp.mapping.select_prev_item(cmp_select),
-    ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
-    -- ['<A-l>'] = cmp.mapping.confirm({select = true}),
+    [keymaps.autocomplete_key_confirm] = cmp.mapping.confirm({select = false}),
+    [keymaps.autocomplete_key_prev] = cmp.mapping.select_prev_item(cmp_select),
+    [keymaps.autocomplete_key_next] = cmp.mapping.select_next_item(cmp_select),
   }),
 })
 
