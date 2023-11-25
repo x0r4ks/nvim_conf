@@ -1,7 +1,9 @@
 
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
-local gitAll = true
+
+local settings = require("core.options");
+
 
 vim.g.mapleader = ' ' -- Главная клавиша для шорткатов
 
@@ -39,8 +41,7 @@ map('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 map('n', '<leader>u', ':UndotreeToggle<CR>', opts) -- Открытие UndoTree
 
 ---- Fugittive
-
-if (not gitAll) then
+if (not settings.gitAll) then
     map('n', '<leader>ga', ":Git add ", opts) -- git add вы должны сами ввести файлы
 else
     map('n', '<leader>ga', ":Git add .<CR>", opts) -- git add добовляет все файлы
@@ -54,6 +55,7 @@ map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
 map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
 -- Close buffer
 map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
+map('n', '<leader><A-c>', '<Cmd>BufferClose!<CR>', opts)
 map('n', '<A-t>', '<Cmd>tabnew<CR>', opts)
 
 ---- Comment

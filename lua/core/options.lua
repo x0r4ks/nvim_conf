@@ -31,3 +31,10 @@ opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 -- opt.shortmess:append "sI" -- Откулючение выступительного сообщения
+
+
+local settings = {
+    gitAll = true,
+}
+
+return settings

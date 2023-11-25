@@ -1,5 +1,5 @@
 local lsp = require('lsp-zero').preset({})
-
+local cmp = require('cmp')
 lsp.set_sign_icons({
   error = '✘',
   warn = '▲',
@@ -26,18 +26,16 @@ cmp.setup({
     completion = cmp.config.window.bordered(),
     documentation = cmp.config.window.bordered(),
   },
-  mapping = {
+  mapping = cmp.mapping.preset.insert({
     -- `Enter` key to confirm completion
-    -- ['<CR>'] = cmp.mapping.confirm({select = false}),
-
+    ['<CR>'] = cmp.mapping.confirm({select = false}),
+        
     -- Ctrl+Space to trigger completion menu
     -- ['<C-Space>'] = cmp.mapping.complete(),
     
-    ['<A-k>'] = cmp.mapping.select_prev_item(cmp_select),
-    ['<A-j>'] = cmp.mapping.select_next_item(cmp_select),
-    ['<A-l>'] = cmp.mapping.confirm({select = true}),
-    ["<C-Space>"] = cmp.mapping.complete(),
-
-  },
+    -- ['<Tab>'] = cmp.mapping.select_prev_item(cmp_select),
+    ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
+    -- ['<A-l>'] = cmp.mapping.confirm({select = true}),
+  }),
 })
 

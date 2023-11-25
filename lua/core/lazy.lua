@@ -66,8 +66,8 @@ lazy.setup({
         'folke/neoconf.nvim',
         'williamboman/mason-lspconfig.nvim',
         'jose-elias-alvarez/null-ls.nvim',
-        'jay-babu/mason-null-ls.nvim',
         'stevearc/aerial.nvim',
+        'jay-babu/mason-null-ls.nvim',
        -- 'williamboman/nvim-lsp-installer'
     },
     {
