@@ -39,6 +39,7 @@ local settings = {
     outline_preview = false,
     outline_autojump = false,
     outline_linenumbers = false,
+    toggle_term_direction="horizontal" -- horizontal, float, tab, vertical
 }
 
 return settings

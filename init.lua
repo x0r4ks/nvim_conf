@@ -13,6 +13,9 @@ require('plugins/hex-nvim')
 require('plugins/outline')
 require('plugins/nullls')
 require('plugins/gitsign')
+require('plugins/toggle-term')
+require('plugins/bqf')
+
 -- Load lsp
 require('lsp/lsp-zero')
 
@@ -32,5 +35,7 @@ require'lualine'.setup {
         theme = 'gruvbox-material'
     }
 }
+
+vim.g.codeium_disable_bindings = 1
 
 vim.cmd[[colorscheme gruvbox-material]]

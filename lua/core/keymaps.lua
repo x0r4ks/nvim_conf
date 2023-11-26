@@ -1,7 +1,8 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+local options = require('core.options')
 
-local settings = require("core.options");
+local settings = require("core.options")
 
 vim.g.mapleader = ' ' -- Главная клавиша для шорткатов
 
@@ -23,6 +24,9 @@ map('n', '<leader>S', ':wq<CR>', opts)
 --- NeoTree
 map('n', '<leader>e', ':Neotree toggle<CR>', opts)            -- открыть/закрыть файлы
 map('n', '<leader>o', ':Neotree git_status toggle<CR>', opts) -- открыть/закрыть git_status
+
+
+
 
 ---- Telescop
 
