@@ -35,6 +35,10 @@ map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
 -- Поиск буфферов (вкладок) по их имени
 map('n', '<leader>fb', ':Telescope buffers<CR>', opts)
 
+map('n', '<leader>gc', ':Telescope git_commits<CR>', opts)
+map('n', '<leader>gb', ':Telescope git_branches<CR>', opts)
+map('n', '<leader>gs', ':Telescope git_status<CR>', opts)
+
 
 
 ---- UndoTree
@@ -74,7 +78,11 @@ local keys = {
     autocomplete_key_confirm = "<CR>", -- <CR> is Enter
     autocomplete_key_next = "<Tab>",   -- <Tab> is Tab
     autocomplete_key_prev = "<Tab>",
+    
     outline_toggle_key = "<leader>a",
+
+    telescope_goto_definitions = "<leader>fd",
+    telescope_goto_referenses = "<leader>fr",
 }
 
 return keys

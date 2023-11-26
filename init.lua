@@ -12,6 +12,7 @@ require('plugins/autopairs')
 require('plugins/hex-nvim')
 require('plugins/outline')
 require('plugins/nullls')
+require('plugins/gitsign')
 -- Load lsp
 require('lsp/lsp-zero')
 
@@ -19,4 +20,17 @@ require('lsp/lsp-zero')
 require('core/autocommands')
 
 -- Set Color scheme
-vim.cmd [[colorscheme darcula]]
+
+-- require('theme-name').setup {
+--     style = 'theme-style'
+-- }
+-- require('theme-name').load()
+
+
+require'lualine'.setup {
+    options = {
+        theme = 'gruvbox-material'
+    }
+}
+
+vim.cmd[[colorscheme gruvbox-material]]

@@ -24,6 +24,8 @@ lazy.setup({
     -- Иконки
     { 'kyazdani42/nvim-web-devicons', lazy = true },
 
+    {'lewis6991/gitsigns.nvim'},
+
     -- Sidebar file exploer
     {
         "nvim-neo-tree/neo-tree.nvim",
@@ -110,7 +112,9 @@ lazy.setup({
     {
         'sainnhe/gruvbox-material',
         'projekt0n/github-nvim-theme',
-        'doums/darcula'
+        'doums/darcula',
+        -- 'navarasu/onedark.nvim',
+        'sonph/onehalf',
     },
 
     {
