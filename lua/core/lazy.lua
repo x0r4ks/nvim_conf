@@ -30,11 +30,6 @@ lazy.setup({
         dependencies = {"nvim-lua/plenary.nvim", "MunifTanjim/nui.nvim"}
     },
     
-    -- TagBar
-    {
-        'preservim/tagbar',
-    },
-
     -- Telescope
     {
         'nvim-telescope/telescope.nvim',
@@ -67,7 +62,10 @@ lazy.setup({
         'williamboman/mason-lspconfig.nvim',
         'jose-elias-alvarez/null-ls.nvim',
         'stevearc/aerial.nvim',
+        'hedyhli/outline.nvim',
+        'jose-elias-alvarez/null-ls.nvim',
         'jay-babu/mason-null-ls.nvim',
+        'lukas-reineke/lsp-format.nvim',
        -- 'williamboman/nvim-lsp-installer'
     },
     {

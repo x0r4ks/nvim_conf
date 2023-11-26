@@ -35,5 +35,35 @@ cmp.setup({
     [keymaps.autocomplete_key_prev] = cmp.mapping.select_prev_item(cmp_select),
     [keymaps.autocomplete_key_next] = cmp.mapping.select_next_item(cmp_select),
   }),
+
+  formatting = {
+      -- changing the order of fields so the icon is the first
+      fields = {'menu', 'abbr', 'kind'},
+      -- here is where the change happens
+      format = function(entry, item)
+      local menu_icon = {
+        nvim_lsp = 'λ',
+        luasnip = '⋗',
+        buffer = 'Ω',
+        path = '🖫',
+        nvim_lua = 'Π',
+      }
+
+      item.menu = menu_icon[entry.source.name]
+      return item
+    end,
+  }, 
+
 })
 
+if options.autoformatting then
+    lsp.on_attach(function(client, bufnr)
+      lsp.default_keymaps({buffer = bufnr})
+    
+      -- make sure you use clients with formatting capabilities
+      -- otherwise you'll get a warning message
+      if client.supports_method('textDocument/formatting') then
+        require('lsp-format').on_attach(client)
+      end
+    end)
+end

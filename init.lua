@@ -10,7 +10,8 @@ require('plugins/notify')
 require('plugins/comment')
 require('plugins/autopairs')
 require('plugins/hex-nvim')
-
+require('plugins/outline')
+require('plugins/nullls')
 -- Load lsp
 require('lsp/lsp-zero')
 
@@ -18,4 +19,4 @@ require('lsp/lsp-zero')
 require('core/autocommands')
 
 -- Set Color scheme
-vim.cmd[[colorscheme darcula]]
+vim.cmd [[colorscheme darcula]]
