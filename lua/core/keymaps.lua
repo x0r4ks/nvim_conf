@@ -59,12 +59,12 @@ map('n', '<leader>gm', ":Git commit<CR>", opts)    -- git commit
 
 ---- Barbar
 -- Move to previous/next
-map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
-map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
+map('n', '<C-,>', '<Cmd>BufferPrevious<CR>', opts)
+map('n', '<C-.>', '<Cmd>BufferNext<CR>', opts)
 -- Close buffer
-map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
-map('n', '<leader><A-c>', '<Cmd>BufferClose!<CR>', opts)
-map('n', '<A-t>', '<Cmd>tabnew<CR>', opts)
+map('n', '<C-c>', '<Cmd>BufferClose<CR>', opts)
+map('n', '<leader><C-c>', '<Cmd>BufferClose!<CR>', opts)
+map('n', '<C-t>', '<Cmd>tabnew<CR>', opts)
 
 ---- Comment
 map('n', '<leader>/', ':CommentToggle<CR>', opts)
