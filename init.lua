@@ -3,6 +3,7 @@ require('core/options')
 require('core/keymaps')
 require('core/lazy')
 
+
 -- Load plugins
 require('plugins/treesitter')
 require('plugins/lualine')
